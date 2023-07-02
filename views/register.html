@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MercadoLiebre - Biggest shopping center</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="/images/77843325-83920880-718b-11ea-96af-4ab797403845.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/register.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <div class="header-search">
+        <input type="search" name="search" placeholder="Search Product..." class="input-field">
+
+        <button class="search-btn" aria-label="Search">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+
+      <a href="#" class="logo">
+        <img src="/images/logo-mercado-liebre.svg" alt="logo-mercado-liebre" width="130" height="31">
+      </a>
+
+      <div class="header-actions">
+
+
+        <a href="/login.html" class="header-action-btn">
+          <ion-icon name="person-add-outline"></ion-icon>
+          <p class="header-action-label">Login</p>
+        </a>
+
+        <a href="/register.html" class="header-action-btn">
+          <ion-icon name="person-add-outline"></ion-icon>
+          <p class="header-action-label">Register</p>
+        </a>
+
+        <button class="header-action-btn">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+          <p class="header-action-label">Cart</p>
+
+          <div class="btn-badge green" aria-hidden="true">3</div>
+        </button>
+
+        <button class="header-action-btn">
+          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+
+          <p class="header-action-label">Wishlisht</p>
+
+          <div class="btn-badge" aria-hidden="true">2</div>
+        </button>
+
+      </div>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="/" class="logo">
+            <img src="/images/logo-mercado-liebre.svg" alt="logo-mercado-liebre" width="130" height="31">
+          </a>
+
+          <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="/" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Shop</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">About</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <div class="container-register">
+    <div class="title">
+      Registration Form
+    </div>
+    <div class="form">
+       <div class="inputfield">
+          <label>Full Name</label>
+          <input type="text" class="input" required>
+       </div>  
+        <div class="inputfield">
+          <label>Username</label>
+          <input type="text" class="input" required>
+       </div>  
+       <div class="inputfield">
+          <label>Date of birth</label>
+          <input type="date" class="input" required>
+       </div>  
+      <div class="inputfield">
+          <label>Password</label>
+          <input type="password" class="input" required>
+       </div> 
+       <div class="inputfield">
+          <label>Confirm password</label>
+          <input type="password" class="input" required>
+       </div> 
+       <div class="inputfield">
+        <label>Address</label>
+        <textarea class="textarea" required></textarea>
+     </div> 
+        <div class="inputfield">
+          <label>User profile</label>
+          <div class="custom_select" aria-required="true">
+            <select>
+              <option value="">Select</option>
+              <option value="male">Seller</option>
+              <option value="female">Buyer</option>
+            </select>
+          </div>
+       </div> 
+        <div class="inputfield">
+          <label>Email Address</label>
+          <input type="text" class="input" required>
+       </div> 
+      <div class="inputfield">
+        <label>Categories of interest</label>
+        <ul>
+          <li><input type="checkbox" name="item1" id="item1" required><label for="item1">Sports </label></li>
+          <li><input type="checkbox" name="item2" id="item2" required><label for="item2">Health </label></li>
+          <li><input type="checkbox" name="item3" id="item3" required><label for="item3">Technology</label></li>
+          <li><input type="checkbox" name="item4" id="item4" required><label for="item4">Home</label></li>
+        </ul>
+       </div> 
+      <div class="inputfield">
+        <label>Upload profile image</label>
+        <form action="upload.php" method="POST" enctype="multipart/form-data" aria-required="true">
+          <input type="file" name="photo" accept="image/*">
+          <input type="submit" value="Subir">
+        </form>
+       </div> 
+      <div class="inputfield terms">
+          <label class="check" aria-required="true">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+        <div class="btn">
+          <a href="/">Send</a>
+        </div>
+      </div>
+      <div class="inputfield">
+        <div class="btn">
+          <button type="button" onclick="resetForm()">Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>	
+
+
+
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="/images/logo-mercado-liebre.svg" alt="logo-mercado-liebre">
+          </a>
+
+          <p class="footer-text">
+            Explore a world of opportunities and find everything you need on our Mercado Liebre website. With millions of new and used products, ranging from electronics and fashion to home goods and more, our platform provides you access to a wide range of options. Discover the best deals, enjoy the security of our transactions, and find exactly what you're looking for. Join the largest community of buyers and sellers in Latin America and experience the convenience of buying and selling on Mercado Liebre today.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Information</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Company</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Payment Type</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Awards Winning</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">World Media Partner</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Become an Agent</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Refund Policy</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Category</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Vehicles</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Technology</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sports</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Beauty and personal care</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Clothing</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Help & Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Dealers & Agents</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ Information</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Return Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Shipping & Delivery</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Order Tranking</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">List of Shops</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 <a href="#">Mercado Liebre</a>. All Rights Reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <div class="payment">
+          <p class="payment-title">We Support</p>
+
+          <img src="/images/payment-img.png" alt="Online payment logos" class="payment-img">
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
